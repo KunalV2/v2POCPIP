@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C391DB87206E48AC00DEA30F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391DB86206E48AC00DEA30F /* AppDelegate.swift */; };
-		C391DB89206E48AC00DEA30F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391DB88206E48AC00DEA30F /* ViewController.swift */; };
 		C391DB8C206E48AD00DEA30F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C391DB8A206E48AD00DEA30F /* Main.storyboard */; };
 		C391DB8E206E48AD00DEA30F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C391DB8D206E48AD00DEA30F /* Assets.xcassets */; };
 		C391DB91206E48AD00DEA30F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C391DB8F206E48AD00DEA30F /* LaunchScreen.storyboard */; };
 		C391DB9C206E48B400DEA30F /* v2POCPIPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391DB9B206E48B400DEA30F /* v2POCPIPUITests.swift */; };
+		C391DBAA206E57A500DEA30F /* samplemovie.mov in Resources */ = {isa = PBXBuildFile; fileRef = C391DBA9206E57A500DEA30F /* samplemovie.mov */; };
+		C391DBAC206E598400DEA30F /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391DBAB206E598400DEA30F /* PlayerViewController.swift */; };
+		C391DBAE206E59AB00DEA30F /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391DBAD206E59AB00DEA30F /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,6 @@
 /* Begin PBXFileReference section */
 		C391DB83206E48AC00DEA30F /* v2POCPIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = v2POCPIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C391DB86206E48AC00DEA30F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C391DB88206E48AC00DEA30F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C391DB8B206E48AD00DEA30F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C391DB8D206E48AD00DEA30F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C391DB90206E48AD00DEA30F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,9 @@
 		C391DB97206E48B300DEA30F /* v2POCPIPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = v2POCPIPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C391DB9B206E48B400DEA30F /* v2POCPIPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v2POCPIPUITests.swift; sourceTree = "<group>"; };
 		C391DB9D206E48B400DEA30F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C391DBA9206E57A500DEA30F /* samplemovie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = samplemovie.mov; sourceTree = "<group>"; };
+		C391DBAB206E598400DEA30F /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		C391DBAD206E59AB00DEA30F /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 		C391DB7A206E48AB00DEA30F = {
 			isa = PBXGroup;
 			children = (
+				C391DBA8206E57A500DEA30F /* Videos */,
 				C391DB85206E48AC00DEA30F /* v2POCPIP */,
 				C391DB9A206E48B300DEA30F /* v2POCPIPUITests */,
 				C391DB84206E48AC00DEA30F /* Products */,
@@ -78,7 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				C391DB86206E48AC00DEA30F /* AppDelegate.swift */,
-				C391DB88206E48AC00DEA30F /* ViewController.swift */,
+				C391DBAB206E598400DEA30F /* PlayerViewController.swift */,
+				C391DBAD206E59AB00DEA30F /* PlayerView.swift */,
 				C391DB8A206E48AD00DEA30F /* Main.storyboard */,
 				C391DB8D206E48AD00DEA30F /* Assets.xcassets */,
 				C391DB8F206E48AD00DEA30F /* LaunchScreen.storyboard */,
@@ -94,6 +100,14 @@
 				C391DB9D206E48B400DEA30F /* Info.plist */,
 			);
 			path = v2POCPIPUITests;
+			sourceTree = "<group>";
+		};
+		C391DBA8206E57A500DEA30F /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				C391DBA9206E57A500DEA30F /* samplemovie.mov */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +160,12 @@
 				TargetAttributes = {
 					C391DB82206E48AC00DEA30F = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					C391DB96206E48B300DEA30F = {
 						CreatedOnToolsVersion = 9.2;
@@ -180,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C391DB91206E48AD00DEA30F /* LaunchScreen.storyboard in Resources */,
+				C391DBAA206E57A500DEA30F /* samplemovie.mov in Resources */,
 				C391DB8E206E48AD00DEA30F /* Assets.xcassets in Resources */,
 				C391DB8C206E48AD00DEA30F /* Main.storyboard in Resources */,
 			);
@@ -199,8 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C391DB89206E48AC00DEA30F /* ViewController.swift in Sources */,
 				C391DB87206E48AC00DEA30F /* AppDelegate.swift in Sources */,
+				C391DBAC206E598400DEA30F /* PlayerViewController.swift in Sources */,
+				C391DBAE206E59AB00DEA30F /* PlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,13 +374,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4G2KHJ47KE;
 				INFOPLIST_FILE = v2POCPIP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.v2solutions.-.v2POCPIP";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.v2solutions.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ad71c426-dad9-464f-805e-9c699e1434a4";
+				PROVISIONING_PROFILE_SPECIFIER = "V2Inc Wildcard Development Profile";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -367,13 +392,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = v2POCPIP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.v2solutions.-.v2POCPIP";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.v2solutions.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

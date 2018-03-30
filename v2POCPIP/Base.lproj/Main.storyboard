@@ -1,21 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Player View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="PlayerViewController" customModule="v2POCPIP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="PlayerView" customModule="v2POCPIP">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jHB-dv-PnI">
+                                <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="play" id="kDl-1t-BOC">
+                                        <connections>
+                                            <action selector="playPauseButtonWasPressed:" destination="BYZ-38-t0r" id="xkH-ey-NBp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Jug-2J-xOH"/>
+                                    <barButtonItem title="Item" style="plain" id="FRh-zX-bOQ">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="6jE-ag-gOg">
+                                            <rect key="frame" x="84" y="5" width="600" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="timeSliderDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="kNn-sJ-RWd"/>
+                                            </connections>
+                                        </slider>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="A0K-Rz-uwf"/>
+                                    <barButtonItem style="plain" id="kHv-Iq-YUr">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ze2-lo-8Zk">
+                                            <rect key="frame" x="718" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="togglePictureInPictureMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BXQ-5I-tM0"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jHB-dv-PnI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="B3f-ZS-3Wk"/>
+                            <constraint firstItem="jHB-dv-PnI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YQS-E7-dkY"/>
+                            <constraint firstItem="jHB-dv-PnI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="grz-bi-FXK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="pictureInPictureButton" destination="kHv-Iq-YUr" id="9VE-ru-LBI"/>
+                        <outlet property="playPauseButton" destination="kDl-1t-BOC" id="3se-Ma-NTY"/>
+                        <outlet property="timeSlider" destination="6jE-ag-gOg" id="ff1-Ec-Bbd"/>
+                        <outlet property="toolbar" destination="jHB-dv-PnI" id="yCE-gG-GqW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
